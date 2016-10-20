@@ -1,0 +1,92 @@
+/*
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 12px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+*/
+
+.table_container {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.table_container > div {
+    background-color: #fbf9fe
+}
+
+.cDiv {
+    /*margin-top: .77em;*/
+    /*margin-bottom: .3em;*/
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cell_row {
+    height: 90px;
+}
+.cell_img {
+    float: left;
+    width: 90px;
+    height: 90px;
+}
+.cell_text {
+    margin-left: 90px;
+    height: 90px;
+    position: relative;
+}
+
+.clearfix:after {
+    content: "." ;
+    display: block ;
+    height: 0 ;
+    clear: both ;
+    visibility: hidden ;
+}
+
+.bottom_tab {
+    position: fixed;
+    bottom: -1px;
+    float: left;
+    width: 100%;
+    height: 42px;
+}
+.bottom_tab .weui_btn {
+    width: 50%;
+    float: left;
+    border-radius: 0px;
+}
+.bottom_tab .weui_btn + .weui_btn {
+     margin-top: 0px;
+}
+.cell_text .weui_textarea {
+    height: 79px;
+    font-size: 15px;
+}
+.cell_text .weui_textarea_counter {
+    position: absolute;
+    /* 5 + (90 - 79) */
+    bottom: 16px;
+    right: 5px;
+    height: 15px;
+    font-size: 13px;
+}
+
+.table_container .cell .bd {
+    padding-bottom: 42px
+}

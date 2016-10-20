@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- Add your keywords and description here for SEO. -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="weui/style/weui.css"/>
+    <link rel="stylesheet" href="weui/example/example.css">
+    <link rel="stylesheet" href="css/index.css"/>
+
+</head>
+
+<body>
+
+
+<!--<a href="#" class="file" style="text-align: center">选择照片-->
+<!--<input class="file" id="input" type="file" accept="image/*" name="img" multiple="multiple" onchange="imagesChanged(this)" />-->
+<!--</a>-->
+
+<div class="table_container" id="table_container">
+    <div class="cell">
+        <div class="hd">
+            <h1 class="page_title" style="color: #3cc51f">选择3-5张照片</h1>
+        </div>
+        <div class="bd">
+            <div class="cDiv" id="listView"></div>
+
+            <div class="cDiv clearfix" id="inputDiv">
+                <div class="weui_uploader_input_wrp">
+                    <input class="weui_uploader_input" id="input" type="file" accept="image/*" multiple="multiple" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bottom_tab">
+    <a href="javascript:;" class="weui_btn weui_btn_disabled weui_btn_primary" id="preview">预览</a>
+    <a href="javascript:;" class="weui_btn weui_btn_disabled weui_btn_primary" id="release">发布</a>
+</div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+
+</html>
