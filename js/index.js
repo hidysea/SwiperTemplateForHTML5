@@ -3,9 +3,9 @@
  */
 
 var imgCountMax = 5; // 最多添加多少张照片
-var imgFiles = []; // 全局的 imgFiles 存储选择的图片文件
-var up_files = []; // 全局的 up_files 存储uploader队列
-var img_urls = []; // 全局的 img_urls 存储上传后imgUrl
+var imgFiles = []; // 全局的 imgFiles : 存储保存本地的图片文件列表
+var up_files = []; // 全局的 up_files : 存储uploader上传文件队列
+var img_urls = []; // 全局的 img_urls : 存储上传后imgUrl列表
 
 var useQiniuUpload = true; // 预览前,是否使用七牛上传图片
 var isCrossDomain = true; // uptoken_url 是否跨域
