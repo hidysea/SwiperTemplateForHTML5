@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>选择</title>
+    <title>选择图片</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <!-- Add your keywords and description here for SEO. -->
     <meta name="keywords" content="">
@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="weui/example/example.css">
     <link rel="stylesheet" href="css/index.css"/>
 
+    <style>
+        /*使用七牛时添加,不用七牛时注释*/
+        .qiniu_uploader_pickfiles{
+            z-index: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,8 +36,14 @@
             <div class="cDiv" id="listView"></div>
 
             <div class="cDiv clearfix" id="inputDiv">
-                <div class="weui_uploader_input_wrp">
-                    <input class="weui_uploader_input" id="input" type="file" accept="image/*" multiple="multiple" />
+                <div class="weui_uploader_input_wrp" id="container">
+                    <!--在 js 中判断显示哪一个-->
+                    <!--(1)不用七牛上传服务时 要使用 <input> -->
+                    <input class="weui_uploader_input" id="inputfiles" type="file" accept="image/*" multiple="multiple" />
+
+                    <!--(2)使用七牛上传时使用,七牛会在 id="pickfiles" 控件上添加 <file>,在苹果手机上七牛会接收不到图片 -->
+                    <!--另 WeUI 的"weui_uploader_input"会盖住<input> 记得修改 .weui_uploader_input {z-index: 0;}-->
+                    <a class="weui_uploader_input qiniu_uploader_pickfiles" id="pickfiles"></a>
                 </div>
             </div>
         </div>
@@ -39,13 +51,17 @@
 </div>
 
 <div class="bottom_tab">
-    <a href="javascript:;" class="weui_btn weui_btn_disabled weui_btn_primary" id="preview">预览</a>
-    <a href="javascript:;" class="weui_btn weui_btn_disabled weui_btn_primary" id="release">发布</a>
+    <a class="weui_btn weui_btn_disabled weui_btn_primary" id="preview">预览</a>
+    <a class="weui_btn weui_btn_disabled weui_btn_primary" id="release">发布</a>
 </div>
 </body>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/common.js"></script>
+<!--七牛上传-->
+<script src="module/plupload/plupload.full.min.js"></script>
+<script src="module/qiniu/qiniu.js"></script>
+
 <script src="js/index.js"></script>
 
 </html>
