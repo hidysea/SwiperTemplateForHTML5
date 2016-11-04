@@ -214,6 +214,15 @@ $(function () {
     }
 
     // 输入框文字变化事件
+    $(document).on("keydown",".weui_textarea",function () {
+        // 输入框文字长度
+        var maxLength = 50;
+        var len = $(this).val().length;
+        if (len > maxLength) {
+            $(this).val($(this).val().substring(0, maxLength));
+            len = maxLength;
+        };
+    });
     $(document).on("keyup",".weui_textarea",function () {
         // 输入框文字长度
         var maxLength = 50;
